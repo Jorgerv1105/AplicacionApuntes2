@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace AplicacionApuntes2.Models
 {
-    internal class Recordatorio
+    public class Recordatorio
     {
+        public string Texto { get; set; }
+        public TimeSpan FechaHora { get; set; }
+        public bool Activo { get; set; }
     }
 }
