@@ -3,13 +3,14 @@
     x:Class="AplicacionApuntes2.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AplicacionApuntes2"
+    xmlns:views="clr-namespace:AplicacionApuntes2.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="AplicacionApuntes2">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <ShellContent
+            Title="Clima"
+            Icon="weather.png"
+            ContentTemplate="{DataTemplate views:WeatherPage}"
+            Route="WeatherPage" />
+    </TabBar>
 </Shell>
