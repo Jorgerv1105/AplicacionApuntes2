@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows.Input;
 
+
 namespace AplicacionApuntes2.ViewModels
 {
     internal class AboutViewModel
