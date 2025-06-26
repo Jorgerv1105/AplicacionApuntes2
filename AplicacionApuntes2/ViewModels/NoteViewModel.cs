@@ -81,3 +81,5 @@ namespace AplicacionApuntes2.ViewModels
             OnPropertyChanged(nameof(Date));
         }
 }
+}
+
