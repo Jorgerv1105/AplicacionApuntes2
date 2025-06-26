@@ -3,6 +3,18 @@
     x:Class="AplicacionApuntes2.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<<<<<<< Clima
+    xmlns:views="clr-namespace:AplicacionApuntes2.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="AplicacionApuntes2">
+    <TabBar>
+        <ShellContent
+            Title="Clima"
+            Icon="weather.png"
+            ContentTemplate="{DataTemplate views:WeatherPage}"
+            Route="WeatherPage" />
+    </TabBar>
+=======
     xmlns:local="clr-namespace:AplicacionApuntes2.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="Actualización_de_la_aplicación">
@@ -20,4 +32,5 @@
     </TabBar>
 
 
+>>>>>>> master
 </Shell>
