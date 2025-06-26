@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:AplicacionApuntes2.ViewModels"
+             x:Class="AplicacionApuntes2.Views.WeatherPage"
+             Title="Clima Actual"
+             BackgroundColor="#EAF6FF">
+
+    <ContentPage.BindingContext>
+        <vm:WeatherViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Frame BackgroundColor="#FFFFFF" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="Hora actual"
+                           FontSize="16"
+                           TextColor="#007ACC"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" />
+                    <Label Text="{Binding HoraFormateada}"
+                           FontSize="24"
+                           TextColor="#333333"
+                           HorizontalOptions="Center" />
+                    <Label Text="{Binding WeatherDataInfo.timezone_abbreviation}"
+                           FontSize="16"
+                           TextColor="#666666"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#FFFFFF" CornerRadius="12" Padding="20" HasShadow="True">
+                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Image Source="imagen1.png"
+                           HeightRequest="100"
+                           WidthRequest="100"
+                           HorizontalOptions="Center" />
+                    <Label Text="Temperatura"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#007ACC"
+                           HorizontalOptions="Center" />
+                    <Label Text="{Binding WeatherDataInfo.current.temperature_2m}"
+                           FontSize="48"
+                           FontAttributes="Bold"
+                           TextColor="#333333"
+                           HorizontalOptions="Center" />
+                    <Label Text="{Binding WeatherDataInfo.current_units.temperature_2m}"
+                           FontSize="20"
+                           TextColor="#666666"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#FFFFFF" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="15">
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="Humedad:"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#007ACC" />
+                        <Label Text="{Binding WeatherDataInfo.current.relative_humidity_2m}"
+                               FontSize="16"
+                               TextColor="#333333" />
+                        <Label Text="{Binding WeatherDataInfo.current_units.relative_humidity_2m}"
+                               FontSize="16"
+                               TextColor="#666666" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="Lluvia:"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#007ACC" />
+                        <Label Text="{Binding WeatherDataInfo.current.rain}"
+                               FontSize="16"
+                               TextColor="#333333" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
