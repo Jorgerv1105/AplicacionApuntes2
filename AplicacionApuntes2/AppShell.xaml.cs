@@ -1,12 +1,11 @@
-﻿namespace AplicacionApuntes2
+﻿namespace AplicacionApuntes2;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-            Routing.RegisterRoute(nameof(Views.AllNotesPage), typeof(Views.AllNotesPage));
-            Routing.RegisterRoute(nameof(Views.NotePage), typeof(Views.NotePage));
-        }
+        InitializeComponent();
+        Routing.RegisterRoute(nameof(Views.AllNotesPage), typeof(Views.AllNotesPage));
+        Routing.RegisterRoute(nameof(Views.NotePage), typeof(Views.NotePage));
     }
 }
