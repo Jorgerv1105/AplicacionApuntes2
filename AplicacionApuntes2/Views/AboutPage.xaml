@@ -7,8 +7,6 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
-
-            <!-- Persona 1 -->
             <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
                 <VerticalStackLayout Spacing="10">
                     <Image Source="daniel.png" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" />
@@ -17,8 +15,6 @@
                     <Label Text="Deporte favorito: Basket" />
                 </VerticalStackLayout>
             </Frame>
-
-            <!-- Persona 2 -->
             <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
                 <VerticalStackLayout Spacing="10">
                     <Image Source="jorge.jpeg" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" />
@@ -27,8 +23,6 @@
                     <Label Text="Deporte favorito: Futbol" />
                 </VerticalStackLayout>
             </Frame>
-
-            <!-- Persona 3 -->
             <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
                 <VerticalStackLayout Spacing="10">
                     <Image Source="josue.jpeg" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" />
