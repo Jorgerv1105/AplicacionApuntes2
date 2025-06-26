@@ -4,19 +4,40 @@
              xmlns:viewModels="clr-namespace:AplicacionApuntes2.ViewModels"
              x:Class="AplicacionApuntes2.Views.AboutPage"
              x:DataType="viewModels:AboutViewModel">
-    <ContentPage.BindingContext>
-        <viewModels:AboutViewModel />
-    </ContentPage.BindingContext>
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <HorizontalStackLayout Spacing="10">
-            <Image Source="dotnet_bot.png"
-                   SemanticProperties.Description="The dot net bot waving hello!"
-                   HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="End" />
-            <Label FontSize="22" Text="{Binding Version}" VerticalOptions="End" />
-        </HorizontalStackLayout>
 
-        <Label Text="{Binding Message}" />
-        <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Persona 1 -->
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Image Source="daniel.png" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" />
+                    <Label Text="Daniel Mena" FontAttributes="Bold" FontSize="18" />
+                    <Label Text="Edad: 21 años" />
+                    <Label Text="Deporte favorito: Basket" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Persona 2 -->
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Image Source="jorge.jpeg" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" />
+                    <Label Text="Jorge Ramos" FontAttributes="Bold" FontSize="18" />
+                    <Label Text="Edad: 22 años" />
+                    <Label Text="Deporte favorito: Futbol" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Persona 3 -->
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Image Source="josue.jpeg" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" />
+                    <Label Text="Josue Ayala" FontAttributes="Bold" FontSize="18" />
+                    <Label Text="Edad: 22 años" />
+                    <Label Text="Deporte favorito: Poker" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
