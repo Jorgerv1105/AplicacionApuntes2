@@ -59,4 +59,5 @@ namespace AplicacionApuntes2.ViewModels
                     AllNotes.Add(new NoteViewModel(Note.Load(noteId)));
             }
         }
+    }
 }
